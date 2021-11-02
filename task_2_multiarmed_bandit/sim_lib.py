@@ -17,12 +17,12 @@ def generate_new_banner(n, a=ALPHA, b=BETA, mu=MU):
     return p, lifetimes
 
 
-def simulation(policy: Callable, n=10 ** 6, initial_banners=10):
+def simulation(policy: Callable, n=10 ** 6, initial_banners=9):
     state = pd.DataFrame(np.zeros((initial_banners, 4)), columns=['impressions', 'clicks', 'lifetime', 'p'])
     state['p'], state['lifetime'] = generate_new_banner(initial_banners)
     regret = 0
     max_index = initial_banners
-    borning_rate = 7.2 / MU
+    borning_rate = initial_banners*(1-np.exp(-1/MU))
 
     for i in range(n):
         if uniform.rvs() < borning_rate or state.shape[0] < 2:
