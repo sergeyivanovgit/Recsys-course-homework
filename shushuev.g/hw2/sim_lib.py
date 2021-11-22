@@ -1,6 +1,8 @@
 
 import numpy as np
 import pandas as pd
+import time
+from tqdm import *
 
 from scipy.stats import beta, uniform, bernoulli, expon
 from typing import Callable
@@ -8,7 +10,7 @@ from typing import Callable
 ALPHA = 1
 BETA = 20
 MU = 10 ** 4
-MONITORING_FREQ = 10 ** 4
+MONITORING_FREQ = 10 ** 5
 
 
 def generate_new_banner(n, a=ALPHA, b=BETA, mu=MU):
@@ -24,7 +26,7 @@ def simulation(policy: Callable, n=10 ** 6, initial_banners=9):
     max_index = initial_banners
     borning_rate = initial_banners*(1-np.exp(-1/MU))
 
-    for i in range(n):
+    for i in tqdm(range(n)):
         if uniform.rvs() < borning_rate or state.shape[0] < 2:
             p, lifetime = generate_new_banner(1)
             new_banner = pd.DataFrame({'impressions': 0, 'clicks': 0, 'lifetime': lifetime, 'p': p}, index=[max_index])
