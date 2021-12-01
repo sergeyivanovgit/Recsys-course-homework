@@ -1,0 +1,88 @@
+[32m[1m----------------------------------------------------------------------------------------------
+           _
+          | |
+     __  _| |     ___  __ _ _ __ _ __
+     \ \/ / |    / _ \/ _` | '__| '_ \ 
+      >  <| |___|  __/ (_| | |  | | | |
+     /_/\_\_____/\___|\__,_|_|  |_| |_|
+
+        xLearn   -- 0.44 Version --
+----------------------------------------------------------------------------------------------
+
+[39m[0m[35m[1m[ WARNING    ] Validation file(dataset) not found, xLearn has already disable early-stopping.[0m
+[32m[------------] [0mxLearn uses 16 threads for training task.
+[32m[1m[ ACTION     ] Read Problem ...[0m
+[32m[------------] [0mFirst check if the text file has been already converted to binary format.
+[32m[------------] [0mBinary file (train_ffm.txt.bin) found. Skip converting text to binary.
+[32m[------------] [0mNumber of Feature: 5017106
+[32m[------------] [0mNumber of Field: 7
+[32m[------------] [0mTime cost for reading problem: 6.84 (sec)
+[32m[1m[ ACTION     ] Initialize model ...[0m
+[32m[------------] [0mModel size: 1.08 GB
+[32m[------------] [0mTime cost for model initial: 0.71 (sec)
+[32m[1m[ ACTION     ] Start to train ...[0m
+[32m[------------][0m Epoch      Train log_loss     Time cost (sec)
+[32m[ [0m   3%[32m      ][0m     1            0.100303                3.35
+[32m[ [0m   6%[32m      ][0m     2            0.098286                3.34
+[32m[ [0m  10%[32m      ][0m     3            0.097160                3.37
+[32m[ [0m  13%[32m      ][0m     4            0.096150                3.25
+[32m[ [0m  16%[32m      ][0m     5            0.095215                3.24
+[32m[ [0m  20%[32m      ][0m     6            0.094338                3.24
+[32m[ [0m  23%[32m      ][0m     7            0.093497                3.24
+[32m[ [0m  26%[32m      ][0m     8            0.092704                3.24
+[32m[ [0m  30%[32m      ][0m     9            0.091935                3.27
+[32m[ [0m  33%[32m      ][0m    10            0.091193                3.31
+[32m[ [0m  36%[32m      ][0m    11            0.090472                3.34
+[32m[ [0m  40%[32m      ][0m    12            0.089769                3.32
+[32m[ [0m  43%[32m      ][0m    13            0.089076                3.29
+[32m[ [0m  46%[32m      ][0m    14            0.088391                3.30
+[32m[ [0m  50%[32m      ][0m    15            0.087723                3.28
+[32m[ [0m  53%[32m      ][0m    16            0.087058                3.26
+[32m[ [0m  56%[32m      ][0m    17            0.086418                3.28
+[32m[ [0m  60%[32m      ][0m    18            0.085778                3.26
+[32m[ [0m  63%[32m      ][0m    19            0.085157                3.28
+[32m[ [0m  66%[32m      ][0m    20            0.084551                3.31
+[32m[ [0m  70%[32m      ][0m    21            0.083950                3.29
+[32m[ [0m  73%[32m      ][0m    22            0.083361                3.28
+[32m[ [0m  76%[32m      ][0m    23            0.082785                3.30
+[32m[ [0m  80%[32m      ][0m    24            0.082225                3.29
+[32m[ [0m  83%[32m      ][0m    25            0.081667                3.29
+[32m[ [0m  86%[32m      ][0m    26            0.081123                3.29
+[32m[ [0m  90%[32m      ][0m    27            0.080587                3.31
+[32m[ [0m  93%[32m      ][0m    28            0.080057                3.33
+[32m[ [0m  96%[32m      ][0m    29            0.079535                3.29
+[32m[ [0m 100%[32m      ][0m    30            0.079024                3.29
+[32m[1m[ ACTION     ] Start to save model ...[0m
+[32m[------------] [0mModel file: best_model.out
+[32m[------------] [0mTime cost for saving model: 0.55 (sec)
+[32m[1m[ ACTION     ] Finish training[0m
+[32m[1m[ ACTION     ] Clear the xLearn environment ...[0m
+[32m[1m[------------] Total time cost: 106.89 (sec)[0m
+[32m[1m----------------------------------------------------------------------------------------------
+           _
+          | |
+     __  _| |     ___  __ _ _ __ _ __
+     \ \/ / |    / _ \/ _` | '__| '_ \ 
+      >  <| |___|  __/ (_| | |  | | | |
+     /_/\_\_____/\___|\__,_|_|  |_| |_|
+
+        xLearn   -- 0.44 Version --
+----------------------------------------------------------------------------------------------
+
+[39m[0m[32m[------------] [0mxLearn uses 16 threads for prediction task.
+[32m[1m[ ACTION     ] Load model ...[0m
+[32m[------------] [0mLoad model from best_model.out
+[32m[------------] [0mLoss function: cross-entropy
+[32m[------------] [0mScore function: ffm
+[32m[------------] [0mNumber of Feature: 5017106
+[32m[------------] [0mNumber of K: 4
+[32m[------------] [0mNumber of field: 7
+[32m[------------] [0mTime cost for loading model: 0.33 (sec)
+[32m[1m[ ACTION     ] Read Problem ...[0m
+[32m[------------] [0mFirst check if the text file has been already converted to binary format.
+[32m[------------] [0mBinary file (test_ffm.txt.bin) NOT found. Convert text file to binary file.
+[32m[------------] [0mTime cost for reading problem: 2.36 (sec)
+[32m[1m[ ACTION     ] Start to predict ...[0m
+[32m[------------] [0mThe test loss is: 0.135174
+[32m[1m[ ACTION     ] Clear the xLearn environment ...[0m
+[32m[1m[------------] Total time cost: 3.61 (sec)[0m
